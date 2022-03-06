@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>caution-sign.png</file>
+    <file>contact.jpg</file>
+    <file>check.png</file>
+    <file>question.png</file>
+    <file>mute.png</file>
+    <file>video-play-button.png</file>
+    <file>3f6dd424-4451-477f-a48a-5d01f8553bae.jfif</file>
+    <file>history.png</file>
+    <file>main-menu.png</file>
+    <file>settings.png</file>
+    <file>Logo_GEC-removebg-preview.png</file>
+    <file>Sky Series Selected Works _ Eric Cahan.jfif</file>
+    <file>about.png</file>
+  </qresource>
+</RCC>
