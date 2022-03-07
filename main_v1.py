@@ -19,7 +19,6 @@ from pyModbusTCP import utils
 from PyQt5.QtCore import QRunnable, QThreadPool, QTimer, pyqtSlot
 
 _key_thread=0
-import re
 buf_1_time=0 # bien tam doc du lieu 1 lan.
 interval = 2
 connect=["NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO"]
@@ -40,6 +39,7 @@ _data=[("a","b"),]
 from thread2_read_sql import *
 _key_control=0
 from datetime import datetime
+
 class MainWindow(QMainWindow):
     global ip
     global name_ip
@@ -82,7 +82,7 @@ class MainWindow(QMainWindow):
         # stop code hear: 14/01/2021
         #self.show_issue_(_data)
         #------------------------------------------#
-        self.show_table()
+        #self.show_table()
     def start_request(self):
         print("function read data")   
         #self.threadpool.start(Worker(keywords=1))
@@ -117,9 +117,10 @@ class MainWindow(QMainWindow):
                 _data=_data+_var+" "
         f.write(_data)
         f.close() 
+    '''
     def cancel_setting_table(self):
         self.show_table()
-    
+    '''
     def show_issue_(self,key,data):
         #key=1 : table buffer
         #key=2 : table issue
@@ -195,7 +196,7 @@ class MainWindow(QMainWindow):
             print("Can't connect Database")
             self.export_annouce(3)
             _key_sql=0
-            
+    '''       
     def show_table(self):
         #f = open("set_cob.txt", "r")
         f = open("fileWr.txt", "r")
@@ -206,7 +207,7 @@ class MainWindow(QMainWindow):
                     for y in range(15):
                         #print(x[y+i+1])
                         self.ui_import.tableWidget_setting.setItem(y,a,QTableWidgetItem(x[y+i+1]))
-  
+    '''
     def export_annouce(self,_key_annouce):
         if(_key_annouce==1):
             self.ui_import.label_annouce.setText("SQL Connecting....")
